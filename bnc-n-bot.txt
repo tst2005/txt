@@ -1,0 +1,273 @@
+Constat
+=======
+
+Rôle commun
+-----------
+
+Dans le monde d'IRC,
+Les bots et les proxies (bouncer, abrégé BNC) ont une partie de rôle commune.
+Ils sont la pour rester le maximum connecté.
+Car les serveurs IRC sont fait de façon a ce que dès que leur connexion TCP est coupé leur existence sur le serveur est arrêtée.
+On pourrait imaginer des serveurs qui garder des existences persistantes, mais ce n'est pas le cas actuellement.
+
+Lourdeur de l'existant
+----------------------
+
+Je m'étonne de voir la grosseur et complexité des bots et BNC en comparaison de ce besoin simple de rester connecté.
+Dans l'état déjà connecté,
+la version la plus simpliste consiste a répondre au PING lorsque le serveur IRC en envoi un.
+Une version plus avancée, consiste a être capable de rejoindre un channel lorsqu'on a été kické (peut nécessiter de connaître le mot de passe du channel, ou faire une requête vers un quelque chose d'autre pour être invité).
+On peux aussi penser a être capable de se reconnecter si la connexion vient a être fermée (nécessite de savoir quelle identité prendre : nickname, username, realname) peux aussi nécessiter de savoir se logger sur un NickServ.
+On voit vite que cette version plus avancée peux facilement grossir et on se rapproche de plus en plus des fonctionnalités des bots et BNC existant.
+
+
+Analyse de l'existant
+=====================
+
+La plus part des bots sont basés sur la même idée de base.
+Je veux "un bot pour mon channel sur mon réseau parce que j'en ai besoin".
+Du coup les bots se ressemblent et son orienté pour un channel sur un serveur.
+Evidement techniquement il n'est souvent pas difficile de supporter plusieurs channels sur le même serveur.
+Une connexion a un serveur IRC = une identité.
+On a très souvent 1 bot = 1 identité.
+Dès qu'on veux créer un nouveau bot, il faut le configurer, lui donner un pseudo, etc. et il est géré a part, autonome.
+Rare sont les bots qui supporte plusieurs connexions IRC.
+Par exemple avoir un bot qui gère 2 connexions sur le même réseau, avec 2 identités différentes.
+Pourtant ca serait sans doute pratique, en cas de split, ou déconnexion de l'un des deux.
+
+
+Origine de la réflection
+========================
+
+Besoin initial
+--------------
+
+J'utilise un BNC qui est utilisé par un client IRC multi serveur.
+Le BNC que j'utilise (comme beaucoup) ne supporte que 1 compte = 1 connexion IRC. Ce n'est pas gênant car mon client IRC peux se connecter sur tous mes comptes BNC.
+Mais je voulais pouvoir consulter et discuter depuis mon téléphone mobile.
+Hors ce n'est pas impossible mais c'est fastidieux de configurer tous les comptes sur un client IRC de téléphone mobile.
+D'autant qu'il est plus limité niveau fonctionnalité.
+
+
+Solution
+--------
+
+J'ai imaginer créer sur le BNC un compte supplémentaire, qui ne se connecterait pas a un serveur IRC classique mais permettrait de consulter les autres comptes.
+C'est a dire espionner les autres comptes (recevoir les messages) et envoyer des messages. Un genre de prise de contrôle a distance des autres comptes.
+Mon besoin étant d'envoyer et recevoir des messages textes, ca ne me semble pas bien compliqué (même si a y réfléchir si on veux toutes les fonctionnalités de confort, ca vite le devenir... je penses aux informations de whois par exemple)
+
+
+Plusieurs clients sur une seule connexion
+-----------------------------------------
+
+Certains BNC permettent de se connecter plusieurs fois sur le même compte qui lui est connecté une seule fois sur un serveur IRC.
+On se retrouve donc a pouvoir parler depuis plusieurs "endroits" différents sous la même identité.
+
+
+Problématique diffuser l'information sortante
+---------------------------------------------
+
+Lorsqu'un des deux clients parles, le serveur ne renvoie jamais ce qui a été dit au client. Donc c'est au BNC de faire en sorte que le 2ème client sache que le 1er a parler.
+
+
+Solution
+--------
+
+Ce problème n'as pas été testé mais il devrait être gérable
+Lorsqu'un client dit "PRIVMSG ..." il suffit de renvoyer au 2ème client
+":sonidentite PRIVMSG ..." pour qu'il se voit lui même parler.
+A tester...
+
+
+Problématique de replay de la phase de connexion
+------------------------------------------------
+
+Le 1er client était seul sur la connexion il a reçu et envoyer toutes les informations sans être perturbe par un tiers.
+Le second client lui a débarqué lorsque la connexion était déjà établie et l'identité visible sur le serveur IRC est déjà sans doute authentifiée, et présente sur différent channel.
+
+Le seconde client doit donc de façon non destructive rattraper tout ce retard.
+C'est aussi le rôle du BNC que d'être capable de rejouer les étapes importantes (join de channel, info d'authentification ok, etc.)
+
+Les actions destructives peuvent être des enchaînements de commandes ou comportement un peu stupide mais normal dans le cas ou le client pense être tout seul.
+(du genre "vire celui qui utilise mon pseudo actuel" "je reçois un message d'un channel ou je suis pas encore alors quitte le, en attendant que je décide dans quelques secondes de te demander d'y aller")
+
+Solution
+--------
+
+- mémoriser les informations vitales
+- bloquer les actions dangereuses du second client
+- rejouer les infos vitales
+- attendre ? puis débloquer les actions dangereuses ?
+
+
+Tous des bots!
+--------------
+
+On peux envisager l'approche que nos identités IRC (occupée par des comptes BNC) ne serait que des bots et qu'on ne ferait que prendre le contrôle de ces bots.
+Ca permettrait de déporter en dehors de nos clients IRC toute la partie "rester connecter" et "savoir se protéger contre le flood".
+
+
+Le projet
+=========
+
+
+Séparation par rôles
+--------------------
+
+Si on prend un BNC classique, on peux le séparer en 2 parties, une partie qui gère les connections, et l'autre partie qui gère tout le reste.
+
+Partie BNC-
+-----------
+
+Une partie gère les connexions vers les serveurs IRC.
+C'est un proxy très simple.
+Elle reçoit une connexion cliente (comme un proxy web)
+Reçoit l'info de se connecter sur tel serveur:port
+Ensuite transmet tout ce qu'elle reçoit au client et inversement.
+
+Elle doit être la plus simple et efficace possible.
+Elle doit être capable d'établir une connexion TCP, répondre au PING IRC.
+Et transmettre ce qu'elle reçoit a une autre partie.
+Pas de mécanisme intelligent.
+
+Passage d'ordre et contrôle de BNC-
+-----------------------------------
+
+Contrairement au navigateur qui supporte les proxys web.
+Peux de client supporte des "proxy"
+Il n'y a pas (il me semble) de protocole officiel pour cela.
+
+
+Donc je propose une approche transparente un peu similaire au FTP (flux de contrôle, flux de donnée)
+
+avec une mise en situation du genre :
+- le client se connecte sur le proxy connexion (1)
+- le client se connecter sur une interface de contrôle du proxy connexion (1b)
+- le client ordonne de se connecter vers le server:port via (1b)
+- le proxy établie la connexion (2) vers le serveur IRC
+- le client envoie et reçoit toutes les données via (1) comme s'il était connecté lui-même au serveur IRC
+
+La partie contrôle via connexion 1b peux être géré via une interface web, une connexion DCC, telnet, ou tout autre moyen en dehors du client IRC ou programmé via des scripts.
+L'avantage de cette approche est de ne pas nécessite de modification du client IRC.
+
+
+A définir concernant BNC-
+-------------------------
+
+- Le moyen exacte de donner un ordre au BNC- et d'appliquer.
+- Le moyen de choisir son profile de comportement (paramétrer les critères et actions postérieures)
+- Réfléchir si BNC- doit être standalone ou s'il peux être sous forme de service inetd
+
+
+Partie BNC+
+----------
+
+La partie intelligente, plus complexe.
+Doit gérer les identités, les serveurs IRC, port, mot de passe, etc.
+
+
+Problématique de déconnexion entre cliente et BNC-
+---------------------------------------------------
+
+Que se passe t-il si dans l'état :
+[ client ] --(1)--> [ BNC- ] --(2)--> [ serveur IRC ]
+
+La connexion (1) est fermée.
+Le BNC- peux continuer a maintenir la connexion (2) en répondant au PING IRC.
+Mais il reçoit des données du serveur sans savoir quoi en faire.
+Il doit les garder afin de les transmettre au client une fois qu'il le pourra.
+Mais BNC- ne sait pas ni dans combien de temps, ni si le client va revenir.
+Il ne peux pas garder éternellement toutes les données qu'il reçoit.
+
+
+Solutions
+---------
+
+Partie BNC-DB
+-------------
+
+Une partie base de données sera la pour mémoriser toutes les données reçues par BNC- en attendant de pouvoir les transmettre au client.
+
+Profile de comportement de BNC-
+-------------------------------
+
+Je distingue différents type de comportement après que la connexion (1) soit fermée :
+- comme la connexion (1) je ferme la connexion (2)
+- je mémorise tout a l'infini
+- je mémorise via BNC-DB sous certaines condition, avec certains actions postérieures
+
+tant que certains critères sont valides, puis je fermerai la connexion (2) et oublierai (ou non) ce que j'ai reçu.
+Les conditions :
+- pendant un certain temps après que la connexion (1) est été fermée
+- en fonction de la quantité de données reçues
+
+Les actions postérieures :
+- effacer ce qui a été mémorisé
+- garder ce qui a été mémorisé
+
+
+Partie Bot+
+===========
+
+Comme le BNC- est une partie commune a un BNC et un Bot, on peux considérer que BNC- = Bot- .
+Il ne reste que la partie Bot+.
+
+A la différence du rôle d'un BNC le Bot a souvent un rôle de gardien de l'ordre.
+Il est souvent amené à faire l'analyse des évènements ou des données reçue.
+Ce traitement est souvent lourd et peu conduire a une forte charge.
+Une des attaques possibles d'un bot est d'essayer de le charger en traitement afin qu'il ne réponde plus dans les temps au PING du serveur IRC.
+
+Brain
+-----
+
+L'idée principale est d'avoir une partie de traitement intelligente (abrégée Brain).
+Le fait d'extraire ce traitement par rapport a un bot classique simplifie les choses, car ca devient du traitement d'information (quasi indépendante de l'IRC).
+Et on peux plus facilement opéré a large échelle (obtenir des informations sur plusieurs bots/réseaux/channels en même temps)
+Et au besoin appliquer des sanctions plus faste qu'un simple ban (bannir de plusieurs channels, ou plusieurs réseaux, priver cette personne de service comme un site web, ...)
+
+Un aspect sympathique est qu'on peux envisager de gérer un service brain, qui lui se constitue d'une multitude de processus, dont le nombre est géré selon la charge, etc.
+C'est une architecture plus souple, et pouvant répondre a des montées ou baisses de charge de façon plus adaptée.
+En plus de cela on peux aussi envisager de déporter ce service sur une ou plusieurs autres machines.
+
+
+Endormissement et réveil événementiel
+-------------------------------------
+
+Dans le cas ou un bot est sur un channel ou il ne se passe rien.
+Le BNC- (Bot-) gère déjà le fait de rester connecter.
+Tant qu'il ne se passe rien le Bot n'a besoin de rien d'autre.
+On peux donc arrêter ou endormir la partie traitement (Bot+/Brain).
+Et dès qu'il y a une nouvelle action (par exemple, quelqu'un join le channel),
+on réveille la ou les parties concernées.
+Par exemple :
+- join => réveiller la partie qui déterminera si la personne a le droit d'être sur le channel, et le filtrage anti-flood "join"
+- la personne parle => réveille de la partie qui gère l'anti-flood "texte"
+
+Pour comparer, un bot classique continu a utiliser de la mémoire même s'il ne se passe plus rien.
+
+
+Remplacement complet ou partiel de BNC+
+=======================================
+
+BNC+ joue un rôle complexe, il doit gérer beaucoup de chose.
+L'idée est d'arriver a le découper en différente partie simple.
+
+Découpage de BNC+
+-----------------
+
+AUTH : Une partie authentification/identification des utilisateurs (pour les autoriser à se connecter à un compte).
+BNC+DB : Une partie stockage des données de configuration (base de données ?) contenant les identités IRC des bots/users, les channels à joindre.
+COLLECT : Une partie similaire a BNC- mais plus avancée, qui s'occupe de collecter et mettre a jour les informations (présence d'une identité sur un channel, changement de nickname, liste des modes (bans) d'un channel, etc.) Toutes les infos qu'un bot normal est amener a mettre a jour.
+[...]
+
+
+Attention la partie COLLECT est sujet a se faire "attaquer" au sens que c'est elle la partie vulnérable lors d'attaque massive.
+
+
+Les pistes a réfléchir
+======================
+
+- comment traiter l'information, sous quelle forme, laquelle garder (dans le cas d'attaque par exemple)
+  la partie COLLECT a besoin uniquement des données les plus a jour (si une personne change 10 fois de pseudo, c'est le dernier pseudo qu'il souhaite
+
+
