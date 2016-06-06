@@ -39,7 +39,7 @@ c'est à ce moment la qu'il se rappel avoir voler a dos de dragon...
 * 9. il prend conscience qu'une part de ses actions est mauvaise, et ne veux pas etre comme ca.
 * A. il cherche a savoir comment purifier son ame (car il sent bien qu'il n'a plus une emprise totale sur lui meme)
 mais le demon a de + en + d'emprise, cest pas évident.
-* B. il se fait exorcisé par un puissant <<exorciseur>> mais le demon est bien trop puissant et pas tuable, cest juste le lien(la porte) qui est verrouillé.
+* B. il se fait exorcisé par un puissant `exorciseur` mais le demon est bien trop puissant et pas tuable, cest juste le lien(la porte) qui est verrouillé.
 * C. il y eu des effets de bord : de l'amnesie 
 d'une part volontaire induite par de la souffrance/honte/regret assez forte pour ne pas vouloir se rappeler de tout ca
 aussi parce que le demon effacait sa memoire lors de ses activités de possession.
@@ -79,7 +79,7 @@ Son adversaire ayant cru gagner et se retrouvant en facheuse posture compris que
 Et cest ainsi que cette petite bataille devient la grande bataille.
 
 
-Renommée de <<BadBo>>
+Renommée de `BadBô`
 =====================
 
 ## 1) Le fait d'y avoir été et d'etre encore en vie est un exploit... (assez logique vu qu'il n'a pas combatu)
@@ -99,10 +99,10 @@ peu puissant il n'arriva quasiment pas controler son corps.
 Par contre ce demon remonta l'information a ses supérieurs.
 Au final c'est l'un des chefs de guerre en personne qui le posseda.
 Les écrits parlent d'un lien pere/fil, car il y avait bien un lien de protection fort de la part du chef de guerre vis a vis de <<badbo>>
-Pendant que <<badBo>> decouvrait ces contrés let chef démon pouvait utiliser son corps pour mener des activités dans l'autre plan.
+Pendant que `BadBô` decouvrait ces contrés let chef démon pouvait utiliser son corps pour mener des activités dans l'autre plan.
 
 C'est en fait une protection tout ce qu'il y a de plus interessé.
-Si <<BadBo>> était tué sur le plan sombre ca aurait sans doute coupé le lien, chacun retournant sur son plan d'origine,
+Si `BadBô` était tué sur le plan sombre ca aurait sans doute coupé le lien, chacun retournant sur son plan d'origine,
 signifiant la fin des activités entreprise par le Chef démon.
 
 
@@ -116,8 +116,8 @@ Relation entre le démon et Bô
 
 Le gros problème de leur relation c'est qu'elle était pour le moins amicale et bénéfique pour les 2 partis (dans une certaine mesure).
 Chacun permettait a l'autre d'avoir quelque chose qu'il n'aurait pas pu avoir.
-Et le pouvoir, la puissance, ... était assez addictif pour <<BadBo>>.
-BadBo restant quelqu'un de gentil et en qui on pouvait avoir confiance, le Chef Demon lui avait transmis le commandement de son armée (pas total mais bcp de chose quand meme)
+Et le pouvoir, la puissance, ... était assez addictif pour *BadBô*.
+`BadBô` restant quelqu'un de gentil et en qui on pouvait avoir confiance, le Chef Demon lui avait transmis le commandement de son armée (pas total mais bcp de chose quand meme)
 
 Se balader a dos de dragons au commande d'une des plus grande armé ... en étant crain de tous. était pour le moins grisant.
 Pas évident de renoncer a tout ca pour redevenir un simple demi-orc.
