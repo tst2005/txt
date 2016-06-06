@@ -1,48 +1,50 @@
 
 
-	Bô trouve un ecrit qui lui est étrangement famillier.
+ * Bô trouve un ecrit qui lui est étrangement famillier.
 
 Le récit d'un enfant au milieu d'un champ de bataille que les 2 armées qui s'affronte ignore.
 Certains disent que c'etait le fil du général d'un des 2 armées.
 D'autres que ce n'etait pas vraiment un enfant mais une illusion, car certain raconte avoir vu une petite fille.
 
-	Bô se souvient y avoir été. Pas comme un fier soldat mais comme cet enfant qui se baladait tranquillement sur ce gigantesque champ de bataille.
+ * Bô se souvient y avoir été. Pas comme un fier soldat mais comme cet enfant qui se baladait tranquillement sur ce gigantesque champ de bataille.
 
 
 
+Schema chronologique
+--------------------
 
 
-historique :
-
+```
 0---|---|---|-| |-||| 8-9-ABCD
     1   2   3 4 | ||| |
               | | |||-|
               5-/ 6  7
+```
 
-0 naissance demi-orc, on ne sait pas grand chose.
-1 parent adoptif humain, parent aimant. enfance plutot heureuse.
-2 ecole, un peu difficile d etre un demi-orc (ne pas taper ses camarades meme s'il le cherche, prendre sur soi)
-3 adolescence, il decouvre et traine dans un bar un peu louche mais fascinant.
-  il y traine souvent et se fait accepté.
-  il découvre que ce bar sert en fait de porte vers un autre plan.
-4 la curiosité finit par le pousser a franchier le pas et l'emporté de l'autre coté.
-  le temps ne s'ecoule pas de la meme maniere et les regles de "vie" non plus.
-  il ne fait rien comme tout le monde, il est percu comme un etranger, cest lui le gars louche.
-  mais personne ne le juge comme une quelconque menace donc il est toléré un peu partout (comme un enfant)
-5 il est fait son 1er voyage
-6 il fait plusieur voyage, se fait de + en + de relation (+/- recommendable)
-7 son ame commence a etre corrompu par le mal, la puissance et pouvoir lui monte a la tete.
-8 il revient au plan initial (mais joue une double vie) car il est connu et craint dans les 2 plans.
-  c'est à ce moment la qu'il se rappel avoir voler a dos de dragon...
-9 il prend conscience qu'une part de ses actions est mauvaise, et ne veux pas etre comme ca.
-A il cherche a savoir comment purifier son ame (car il sent bien qu'il n'a plus une emprise totale sur lui meme)
-  mais le demon a de + en + d'emprise, cest pas évident.
-B il se fait exorcisé par un puissant <<exorciseur>> mais le demon est bien trop puissant et pas tuable, cest juste le lien(la porte) qui est verrouillé.
-C il y eu des effets de bord : de l'amnesie 
-  d'une part volontaire induite par de la souffrance/honte/regret assez forte pour ne pas vouloir se rappeler de tout ca
-  aussi parce que le demon effacait sa memoire lors de ses activités de possession.
-  mais aussi involontaire induite par l'exorcisme magique, tentant de bloquer tout ce qui etait démoniaque, emporta avec lui des souvenirs...
-D le bar fut fermé mais d'autre existe encore.
+* 0. naissance demi-orc, on ne sait pas grand chose.
+* 1. parent adoptif humain, parent aimant. enfance plutot heureuse.
+* 2. ecole, un peu difficile d etre un demi-orc (ne pas taper ses camarades meme s'il le cherche, prendre sur soi)
+* 3. adolescence, il decouvre et traine dans un bar un peu louche mais fascinant.
+il y traine souvent et se fait accepté.
+il découvre que ce bar sert en fait de porte vers un autre plan.
+* 4. la curiosité finit par le pousser a franchier le pas et l'emporté de l'autre coté.
+le temps ne s'ecoule pas de la meme maniere et les regles de "vie" non plus.
+il ne fait rien comme tout le monde, il est percu comme un etranger, cest lui le gars louche.
+mais personne ne le juge comme une quelconque menace donc il est toléré un peu partout (comme un enfant)
+* 5. il est fait son 1er voyage
+* 6. il fait plusieur voyage, se fait de + en + de relation (+/- recommendable)
+* 7. son ame commence a etre corrompu par le mal, la puissance et pouvoir lui monte a la tete.
+* 8. il revient au plan initial (mais joue une double vie) car il est connu et craint dans les 2 plans.
+c'est à ce moment la qu'il se rappel avoir voler a dos de dragon...
+* 9. il prend conscience qu'une part de ses actions est mauvaise, et ne veux pas etre comme ca.
+* A. il cherche a savoir comment purifier son ame (car il sent bien qu'il n'a plus une emprise totale sur lui meme)
+mais le demon a de + en + d'emprise, cest pas évident.
+* B. il se fait exorcisé par un puissant <<exorciseur>> mais le demon est bien trop puissant et pas tuable, cest juste le lien(la porte) qui est verrouillé.
+* C. il y eu des effets de bord : de l'amnesie 
+d'une part volontaire induite par de la souffrance/honte/regret assez forte pour ne pas vouloir se rappeler de tout ca
+aussi parce que le demon effacait sa memoire lors de ses activités de possession.
+mais aussi involontaire induite par l'exorcisme magique, tentant de bloquer tout ce qui etait démoniaque, emporta avec lui des souvenirs...
+* D. le bar fut fermé mais d'autre existe encore.
 
 
 
@@ -62,6 +64,7 @@ Les recits de ce plan démoniaque, parle de lui comme d'une ombre.
 
 
 La grande bataille
+==================
 
 2 amis tout deux connus et extrement puissant etaient a la tete des 2 plus grosse armés de ce plan.
 Ils etaient depuis longtemps en compétition "amicale".
@@ -77,14 +80,19 @@ Et cest ainsi que cette petite bataille devient la grande bataille.
 
 
 Renommée de <<BadBo>>
+=====================
 
-1) Le fait d'y avoir été et d'etre encore en vie est un exploit... (assez logique vu qu'il n'a pas combatu)
-	TODO: definir quand est-ce qu'on meure dans ce plan.
-2) Il connaissait du monde, y compris les 2 chef de guerres.
-   Ce qui est la 2eme raison qui fait que personne ne l'attaquait, les soldats étaient là pour combattre l'armé d'en face, il ne correspondait pas avec ce critère.
+## 1) Le fait d'y avoir été et d'etre encore en vie est un exploit... (assez logique vu qu'il n'a pas combatu)
+
+TODO: definir quand est-ce qu'on meure dans ce plan.
+
+## 2) Il connaissait du monde, y compris les 2 chef de guerres.
+
+Ce qui est la 2eme raison qui fait que personne ne l'attaquait, les soldats étaient là pour combattre l'armé d'en face, il ne correspondait pas avec ce critère.
 
 
 Le demon
+========
 
 lors des premiers voyages cest un demon lamba qui a pris possession de son corps physique.
 peu puissant il n'arriva quasiment pas controler son corps.
@@ -104,6 +112,7 @@ TODO: sil a eu des pertes de memoire, et au fur et a mesure des doute sur ce qui
 
 
 Relation entre le démon et Bô
+=============================
 
 Le gros problème de leur relation c'est qu'elle était pour le moins amicale et bénéfique pour les 2 partis (dans une certaine mesure).
 Chacun permettait a l'autre d'avoir quelque chose qu'il n'aurait pas pu avoir.
