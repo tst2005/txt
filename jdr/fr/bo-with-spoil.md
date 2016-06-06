@@ -31,8 +31,8 @@ il découvre que ce bar sert en fait de porte vers un autre plan.
 le temps ne s'ecoule pas de la meme maniere et les regles de "vie" non plus.
 il ne fait rien comme tout le monde, il est percu comme un etranger, cest lui le gars louche.
 mais personne ne le juge comme une quelconque menace donc il est toléré un peu partout (comme un enfant)
-* 5. il est fait son 1er voyage
-* 6. il fait plusieur voyage, se fait de + en + de relation (+/- recommendable)
+* 5. il fait son 1er voyage
+* 6. il fait plusieur voyage, se fait de + en + de relations (parfois peu recommendable)
 * 7. son ame commence a etre corrompu par le mal, la puissance et pouvoir lui monte a la tete.
 * 8. il revient au plan initial (mais joue une double vie) car il est connu et craint dans les 2 plans.
 c'est à ce moment la qu'il se rappel avoir voler a dos de dragon...
