@@ -1,6 +1,6 @@
 
 
- * Bô trouve un ecrit qui lui est étrangement famillier.
+ * Bô trouve un écrit qui lui est étrangement famillier.
 
 Le récit d'un enfant au milieu d'un champ de bataille que les 2 armées qui s'affronte ignore.
 Certains disent que c'etait le fil du général d'un des 2 armées.
@@ -10,12 +10,12 @@ D'autres que ce n'etait pas vraiment un enfant mais une illusion, car certain ra
 
 
 
-Schema chronologique
+Schéma chronologique
 --------------------
 
 
 ```
-0---|---|---|-| |-||| 8-9-ABCD
+0---|---|---|-| |-||| 8-9-A--B-C-D
     1   2   3 4 | ||| |
               | | |||-|
               5-/ 6  7
@@ -47,18 +47,21 @@ mais aussi involontaire induite par l'exorcisme magique, tentant de bloquer tout
 * D. le bar fut fermé mais d'autre existe encore.
 
 
+Le `plan démoniaque`
+====================
 
-
-L'autre plan est inversé pour le bien/mal lumiere/ombre.
+L'autre plan est inversé pour le bien/mal lumière/ombre.
 Les lois de vie et de mort ne sont pas les memes.
+
 Il se trouve que son corps physique est resté sur son plan d'origine, il n'y a que son ame qui voyage.
-Manque de bol pendant ce temps un démon a traversé dans l'autre sens et a pris posséssion de son corps.
+Manque de bol pendant ce temps un démon a traversé dans l'autre sens et a pris possession de son corps.
+
 Dans le plan démoniaque on a pas de corps physique, on a la représentation de ce que l'on est (ou de ce qu'on veut paraitre)
 
 Cest pour ca que les soldats démons du champ de bataille le voyait comme un jeune qui se promène et qui ne cherche pas la bagare.
 Il apprendra plus tard les vrais enjeux de cette bataille.
 
-Les recits de ce plan démoniaque, parle de lui comme d'une ombre.
+Les récits de ce plan démoniaque, parle de lui comme d'une ombre (parce que tout ce monde est sombre et que lui est lumineux, la traduction à garder l'opposition).
 
 
 
@@ -66,38 +69,53 @@ Les recits de ce plan démoniaque, parle de lui comme d'une ombre.
 La grande bataille
 ==================
 
-2 amis tout deux connus et extrement puissant etaient a la tete des 2 plus grosse armés de ce plan.
+2 amis/frères(?) tout deux connus et extrement puissant etaient a la tete des 2 plus grosse armés de ce plan.
 Ils etaient depuis longtemps en compétition "amicale".
-Ils avaient d'un commun accord décidé de se livrer un petit combat pour déterminer la valeure de leur soldat et décidé qui devait commander.
+Ils voulaient savoir qui étaient le plus fort et le plus à même de commander.
+Plutot que de faire combattre toute leur force... ils ont décidé de se livrer un petit combat en guise d'échantillon afin de déterminer la valeure de leur armées et décider qui devait commander.
 
 Le déroulement de la bataille fut étrange et malheureux.
-Chacun des 2 chefs étaient pret a perdre, mais a condition que ca soit la tete haute.
-L'un des 2 sous-estima les forces qu'enverait l'autre, mais ne voulant pas perdre d'une défaite cuisant il décida de tricher un peu d'envoyer des forces en renfort.
-Malheureusement il sur-estima les forces enemis et devient a son tour en position d'infliger une défaite désonnorante a son adversaire.
-Son adversaire ayant cru gagner et se retrouvant en facheuse posture compris que son adversaire avait envoyé des renforts et fit de meme !
+Chacun des 2 chefs auraient accepté de perdre, mais a condition que ca soit la tête haute.
+L'un des 2 sous-estima les forces qu'enverait l'autre, mais ne voulant pas perdre d'une défaite cuissante il décida de tricher un peu d'envoyer des forces en renfort.
+Malheureusement il sur-estima les forces enemis et devient à son tour en position d'infliger une défaite désonnorante à son adversaire.
+Son adversaire ayant cru gagner et se retrouvant soudainement en facheuse posture compris que son adversaire avait envoyé des renforts et fit de même !
 
-Et cest ainsi que cette petite bataille devient la grande bataille.
+Et c'est ainsi que cette petite bataille devient la grande bataille.
 
 
 Renommée de `BadBô`
-=====================
+===================
 
-## 1) Le fait d'y avoir été et d'etre encore en vie est un exploit... (assez logique vu qu'il n'a pas combatu)
+## 1) Le fait d'y avoir été inspire le respect... (assez logique qu'il en ait réchapé vu qu'il n'a pas combatu)
 
 TODO: definir quand est-ce qu'on meure dans ce plan.
+TODO: est-ce que les soldats démons qui ont combattu renaissent (=> j'aimerais que oui) mais en garde le déshonneur d'avoir été vaincu ?
 
-## 2) Il connaissait du monde, y compris les 2 chef de guerres.
+## 2) `BadBô` connaissait beaucoup de monde
 
-Ce qui est la 2eme raison qui fait que personne ne l'attaquait, les soldats étaient là pour combattre l'armé d'en face, il ne correspondait pas avec ce critère.
+Y compris les 2 chef de guerres.
+
+Ce qui est la 2eme raison qui fait que personne ne l'attaquait, les soldats avaient recu l'ordre de combattre l'armé d'en face, il ne voyait pas `BadBô` comme un soldat.
 
 
-Le demon
+Le démon
 ========
 
-lors des premiers voyages cest un demon lamba qui a pris possession de son corps physique.
+# Expliquer pouquoi au début des voyage il n'y pas de soucis et que par la suite oui.
+
+Solution 1 :
+
+Lors des premiers voyages cest un demon lamba qui a pris possession de son corps physique.
 peu puissant il n'arriva quasiment pas controler son corps.
 Par contre ce demon remonta l'information a ses supérieurs.
 Au final c'est l'un des chefs de guerre en personne qui le posseda.
+
+Solution 2 :
+
+Plus on passe de temps sur le plan démoniaque
+
+# les récits par le de père/fil
+
 Les écrits parlent d'un lien pere/fil, car il y avait bien un lien de protection fort de la part du chef de guerre vis a vis de <<badbo>>
 Pendant que `BadBô` decouvrait ces contrés let chef démon pouvait utiliser son corps pour mener des activités dans l'autre plan.
 
@@ -106,7 +124,7 @@ Si `BadBô` était tué sur le plan sombre ca aurait sans doute coupé le lien, 
 signifiant la fin des activités entreprise par le Chef démon.
 
 
-TODO: sil a eu des pertes de memoire, et au fur et a mesure des doute sur ce qui se passe pendant qu'il est de l'autre coté
+TODO: s'il a eu des pertes de memoire, et au fur et a mesure des doute sur ce qui se passe pendant qu'il est de l'autre coté
 
 
 
@@ -121,4 +139,12 @@ Et le pouvoir, la puissance, ... était assez addictif pour *BadBô*.
 
 Se balader a dos de dragons au commande d'une des plus grande armé ... en étant crain de tous. était pour le moins grisant.
 Pas évident de renoncer a tout ca pour redevenir un simple demi-orc.
+
+
+TODO
+ * [ ] trouver un nom a la place de `BadBô` (le racroché à l'histoire précédente "sa seignerie" ?)
+ * [ ] trouver un nom et grade du chef/général démon
+ * [ ] trouver un nom pour le `plan initial`
+ * [ ] trouver un nom pour le `plan démoniaque`
+
 
