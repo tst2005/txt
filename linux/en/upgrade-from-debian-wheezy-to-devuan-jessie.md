@@ -23,7 +23,7 @@ deb http://auto.mirror.devuan.org/merged jessie-updates  main contrib non-free
 deb http://auto.mirror.devuan.org/merged jessie-security main contrib non-free
 ```
 
-## Disable config to stay on wheezy
+## Disable config done to stay on wheezy, allow to move on jessie
 
 * disable pinning
 ```
@@ -127,11 +127,11 @@ success
 ## kernel + headers
 
 ```
-apt-cache search linux-image-3 |grep 686 |grep pae
+# apt-cache search linux-image-3 |grep 686 |grep pae |grep -v dbg
 ```
 
 ```
-apt-get install linux-image-3.XX 
+# apt-get install linux-image-3.16.0-4-686-pae linux-headers-3.16.0-4-686-pae
 ```
 
 ## non-free amd/ati driver
