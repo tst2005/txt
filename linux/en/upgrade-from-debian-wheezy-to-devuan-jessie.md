@@ -23,18 +23,27 @@ deb http://auto.mirror.devuan.org/merged jessie-security main contrib non-free
 * disable default release
 ```
 # vim /etc/apt/apt.conf.d/default-release.conf
+```
 prefix line by //
 
+```
 # apt-get update
+```
 
+```
 # apt-get install devuan-keyring
+```
 confirme with 'y'
 
+
+```
 # apt-get upgrade -s
 # apt-get upgrade -dy
 ...
 Fetched 396 MB in 4min 47s (1,378 kB/s)
+```
 
+```
 # apt-get dist-upgrade -dy  // apt-get dist-upgrade -s
 ...
 Calculating upgrade... Failed
@@ -42,8 +51,12 @@ The following packages have unmet dependencies:
  modemmanager : Breaks: network-manager (< 0.9.8.2-1) but 0.9.4.0-10 is to be installed
  network-manager-gnome : Depends: network-manager (>= 0.9.10) but 0.9.4.0-10 is to be installed
 E: Error, pkgProblemResolver::Resolve generated breaks, this may be caused by held packages.
+```
 
+``` 
 # screen
 # apt-get upgrade 
 [...long processing...]
+```
+
 
