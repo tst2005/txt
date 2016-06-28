@@ -1,9 +1,17 @@
 
+# upgrade how to
+
+## Prepare the upgrade
+
+## disable the Debian repositories
+
 * move old sources lists into old-debian directory
 ```
 # mkdir /etc/apt/sources.list.d/old-debian
 # mv /etc/apt/sources.list.d/* /etc/apt/sources.list.d/old-debian/
 ```
+
+## setup the Devuan repositories
 
 * edit source list / create a new jessie.list for devuan/jessie
 ```
@@ -14,6 +22,8 @@ deb http://auto.mirror.devuan.org/merged jessie          main contrib non-free
 deb http://auto.mirror.devuan.org/merged jessie-updates  main contrib non-free
 deb http://auto.mirror.devuan.org/merged jessie-security main contrib non-free
 ```
+
+## Disable config to stay on wheezy
 
 * disable pinning
 ```
@@ -26,15 +36,21 @@ deb http://auto.mirror.devuan.org/merged jessie-security main contrib non-free
 ```
 prefix line by //
 
+
 ```
 # apt-get update
 ```
+
+## install the devuan keyring
 
 ```
 # apt-get install devuan-keyring
 ```
 confirme with 'y'
 
+## make an first upgrade
+
+Simulation, download ...
 
 ```
 # apt-get upgrade -s
@@ -59,4 +75,50 @@ E: Error, pkgProblemResolver::Resolve generated breaks, this may be caused by he
 [...long processing...]
 ```
 
+The upgrade is ended.
 
+## fix dist-upgrade issue
+
+```
+# apt-get purge -s modemmanager
+The following packages will be REMOVED:
+  modemmanager*
+0 upgraded, 0 newly installed, 1 to remove and 881 not upgraded.
+Purg modemmanager [0.5.2.0-2]
+```
+
+```
+# apt-get purge modemmanager
+The following packages will be REMOVED:
+  modemmanager*
+0 upgraded, 0 newly installed, 1 to remove and 881 not upgraded.
+After this operation, 1,134 kB disk space will be freed.
+Do you want to continue [Y/n]? 
+y
+```
+
+```
+# apt-get purge -s network-manager-gnome
+# apt-get purge network-manager-gnome
+
+# apt-get purge ppp
+
+# apt-get purge network-manager
+```
+
+Issues fixed.
+
+##
+
+```
+# apt-get dist-upgrade -s
+```
+success
+
+```
+# apt-get dist-upgrade -dy
+```
+
+```
+# apt-get dist-upgrade
+```
