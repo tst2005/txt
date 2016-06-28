@@ -17,7 +17,7 @@
 ```
 # touch /etc/apt/sources.list.d/jessie.list
 # chmod a+r /etc/apt/sources.list.d/jessie.list
-# vim /etc/apt/sources.list.d/jessie.list
+# editor /etc/apt/sources.list.d/jessie.list
 deb http://auto.mirror.devuan.org/merged jessie          main contrib non-free
 deb http://auto.mirror.devuan.org/merged jessie-updates  main contrib non-free
 deb http://auto.mirror.devuan.org/merged jessie-security main contrib non-free
@@ -32,7 +32,7 @@ deb http://auto.mirror.devuan.org/merged jessie-security main contrib non-free
 
 * disable default release
 ```
-# vim /etc/apt/apt.conf.d/default-release.conf
+# editor /etc/apt/apt.conf.d/default-release.conf
 ```
 prefix line by //
 
@@ -147,7 +147,7 @@ See https://wiki.debian.org/fr/ATIProprietary#configure
 
 ```
 # mkdir /etc/X11/xorg.conf.d
-# vim /etc/X11/xorg.conf.d/20-fglrx.conf
+# editor /etc/X11/xorg.conf.d/20-fglrx.conf
 Section "Device"
 	Identifier "My GPU"
 	Driver "fglrx"
