@@ -122,3 +122,37 @@ success
 ```
 # apt-get dist-upgrade
 ```
+
+
+## kernel + headers
+
+```
+apt-cache search linux-image-3 |grep 686 |grep pae
+```
+
+```
+apt-get install linux-image-3.XX 
+```
+
+## non-free amd/ati driver
+
+See https://wiki.debian.org/fr/ATIProprietary#Debian_8_.2BAKs_Jessie_.2BALs-
+
+```
+# apt-get install fglrx-driver fglrx-modules-dkms
+```
+
+
+See https://wiki.debian.org/fr/ATIProprietary#configure
+
+```
+# mkdir /etc/X11/xorg.conf.d
+# vim /etc/X11/xorg.conf.d/20-fglrx.conf
+Section "Device"
+	Identifier "My GPU"
+	Driver "fglrx"
+EndSection
+```
+
+
+
