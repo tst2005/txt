@@ -3,7 +3,7 @@
 
 ## Prepare the upgrade
 
-## disable the Debian repositories
+## Disable the Debian repositories
 
 * move old sources lists into old-debian directory
 ```
@@ -11,7 +11,7 @@
 # mv /etc/apt/sources.list.d/* /etc/apt/sources.list.d/old-debian/
 ```
 
-## setup the Devuan repositories
+## Setup the Devuan repositories
 
 * edit source list / create a new jessie.list for devuan/jessie
 ```
@@ -27,28 +27,30 @@ deb http://auto.mirror.devuan.org/merged jessie-security main contrib non-free
 
 * disable pinning
 ```
+# ls /etc/apt/preferences.d/
 # mv /etc/apt/preferences.d/wheezy.pref{,.disabled}
 ```
 
 * disable default release
 ```
 # editor /etc/apt/apt.conf.d/default-release.conf
+//APT::Default-Release "stable";
 ```
-prefix line by //
-
 
 ```
 # apt-get update
 ```
 
-## install the devuan keyring
+## Install the devuan keyring
 
 ```
 # apt-get install devuan-keyring
 ```
-confirme with 'y'
+Confirme with 'y'
 
-## make an first upgrade
+TODO: find a better way to switch from debian to devuan without breaking the trust chain ...
+
+## Make an first upgrade
 
 Simulation, download ...
 
@@ -58,6 +60,8 @@ Simulation, download ...
 ...
 Fetched 396 MB in 4min 47s (1,378 kB/s)
 ```
+
+## The dist-upgrade fail, need to be fixed
 
 ```
 # apt-get dist-upgrade -dy  // apt-get dist-upgrade -s
@@ -69,6 +73,8 @@ The following packages have unmet dependencies:
 E: Error, pkgProblemResolver::Resolve generated breaks, this may be caused by held packages.
 ```
 
+## Make an upgrade first
+
 ``` 
 # screen
 # apt-get upgrade 
@@ -77,7 +83,9 @@ E: Error, pkgProblemResolver::Resolve generated breaks, this may be caused by he
 
 The upgrade is ended.
 
-## fix dist-upgrade issue
+## Fix the dist-upgrade
+
+Simulate and purge each problematic package.
 
 ```
 # apt-get purge -s modemmanager
@@ -85,9 +93,7 @@ The following packages will be REMOVED:
   modemmanager*
 0 upgraded, 0 newly installed, 1 to remove and 881 not upgraded.
 Purg modemmanager [0.5.2.0-2]
-```
 
-```
 # apt-get purge modemmanager
 The following packages will be REMOVED:
   modemmanager*
@@ -108,19 +114,17 @@ y
 
 Issues fixed.
 
-##
+## Make the dist-upgrade
 
 ```
 # apt-get dist-upgrade -s
-```
-success
+...
 
-```
 # apt-get dist-upgrade -dy
-```
+...
 
-```
 # apt-get dist-upgrade
+...
 ```
 
 
@@ -166,7 +170,7 @@ Can be purge if there is no more source other than `/var/lib/dpkg/status`.
 
 Purge removed package content 
 ```
-# dpkg -l |grep ^rc
+# dpkg -l | grep ^rc
 # apt-get purge ...
 ```
 
