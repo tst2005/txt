@@ -155,4 +155,18 @@ EndSection
 ```
 
 
+## little cleanup
+
+Remove old kernels
+```
+# dpkg -l |grep linux-image`
+# apt-cache policy linux-image-...`
+Can be purge if there is no more source other than `/var/lib/dpkg/status`.
+```
+
+Purge removed package content 
+```
+# dpkg -l |grep ^rc
+# apt-get purge ...
+```
 
