@@ -32,12 +32,14 @@ Je n'ai pas trouvé de listing très joli, mais il y a de quoi explorer :
  * [pegasus](http://evandrolg.github.io/pegasus.lua/)
 
 ## game dev
- * [love2d.org](https://love2d.org/) / [love3dd](https://github.com/excessive/love3d)
+
+ * [love2d.org](https://love2d.org/) / [love3d](https://github.com/excessive/love3d)
  * [skynet](https://github.com/cloudwu/skynet)
  * (moins connu : http://www.cocos2d-x.org avec binding lua et js)
  * ...
 
 ## other
+
  * awesome : Window manager
  * [prosody](http://prosody.im/) : XMPP Server
  * [luakit.org](http://luakit.org/), ([github](https://github.com/mason-larobina/luakit)) : Web Browser
