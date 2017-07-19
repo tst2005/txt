@@ -88,6 +88,10 @@ Des moins aboutis mais ca existe :
  * [mscoco](http://mscoco.org/) de microsoft (sur [github](https://github.com/pdollar/coco)) FIXME est-ce que MS utilise vraiment du lua dans mscoco ?!
 
 
+# dans l'embarqué
+
+ * http://www.electrodragon.com/product/nodemcu-lua-amica-r2-esp8266-wifi-board/
+
 # Les inconvenients et problèmes du Lua
 
 Il y a de quoi critique!
