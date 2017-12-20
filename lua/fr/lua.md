@@ -31,6 +31,10 @@ Je n'ai pas trouvé de listing très joli, mais il y a de quoi explorer :
  * [Lwan Web Server](https://github.com/lpereira/lwan)
  * [pegasus](http://evandrolg.github.io/pegasus.lua/)
 
+## des bindings vers d'autres languages
+
+* Embedded Lua for Perl 6 : https://github.com/raydiak/Inline-Lua
+
 ## game dev
 
  * [love2d.org](https://love2d.org/) / [love3d](https://github.com/excessive/love3d)
@@ -230,6 +234,9 @@ voir [la page 19](http://files.catwell.info/presentations/2013-11-lua-workshop-l
 [doc](http://mirven.github.io/underscore.lua/) /
 [github](https://github.com/mirven/underscore.lua) (underscore.lua is obsolete ?) ; Moses seems more up-to-date : [doc](http://yonaba.github.io/Moses/) [github](https://github.com/Yonaba/Moses)
 * strong
+* Terra (A low-level counterpart to Lua): http://terralang.org/
+  * http://terralang.org/api.html#quotes
+* [luajit.io](https://github.com/kingluo/luajit.io/)
 
 # Les environements web avec du lua
 
