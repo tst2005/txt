@@ -34,6 +34,7 @@ Je n'ai pas trouvé de listing très joli, mais il y a de quoi explorer :
 ## des bindings vers d'autres languages
 
 * Embedded Lua for Perl 6 : https://github.com/raydiak/Inline-Lua
+* GopherLua: VM and compiler for Lua in Go : https://github.com/yuin/gopher-lua#standalone-interpreter
 
 ## game dev
 
